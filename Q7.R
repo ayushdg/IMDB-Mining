@@ -18,6 +18,7 @@ for(i in 1:length(lines))
 }
 
 genre_list = unique(lines)
+genre_list[30] = "Unknown"
 genre_counts = list()
 for(i in 1:10)
 {
@@ -27,13 +28,16 @@ for(i in 1:10)
 for(i in 1:length(mem))
 {
   if(mem[i] == 1){
-    genre_counts[[1]][(lines[i] == genre_list) ] = genre_counts[[1]][(lines[i] == genre_list)] + 1
+    genre_counts[[1]][(lines[i] == genre_list) ] = 
+    genre_counts[[1]][(lines[i] == genre_list)] + 1
   }
   else if(mem[i] == 2){
-    genre_counts[[2]][(lines[i] == genre_list) ] = genre_counts[[2]][(lines[i] == genre_list)] + 1
+    genre_counts[[2]][(lines[i] == genre_list) ] = 
+      genre_counts[[2]][(lines[i] == genre_list)] + 1
   }
   else if(mem[i] == 3){
-    genre_counts[[3]][(lines[i] == genre_list) ] = genre_counts[[3]][(lines[i] == genre_list)] + 1
+    genre_counts[[3]][(lines[i] == genre_list) ] = 
+    genre_counts[[3]][(lines[i] == genre_list)] + 1
   }
   else if(mem[i] == 4){
     genre_counts[[4]][(lines[i] == genre_list) ] = genre_counts[[4]][(lines[i] == genre_list)] + 1
